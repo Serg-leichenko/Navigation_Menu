@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #181818;
+}
+
+/*HEADER*/
+.header {
+  background-color: #000;
+  padding: 25px 30px;
+}
+.btn {
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.btn-auth {
+  width: 120px;
+  height: 40px;
+  color: #ffc900;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffc900;
+  margin-left: 30px;
+}
+.btn-auth:hover {
+  color: #000;
+  background-color: #ffc900;
+}
+.drop-items {
+  display: none;
+}
+
+/*BURGER*/
+.burger {
+  display: none;
+  align-self: center;
+  margin-left: 30px;
+}
+.burger span {
+  transition: all 0.3s;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  display: block;
+  margin: 5px;
+  cursor: pointer;
+}
+.first {
+  transform: translate(6px, -1px) rotate(45deg);
+  transform-origin: left top;
+}
+.second {
+  transform: scale(0);
+}
+.last {
+  transform: translate(-3px, -21px) rotate(-45deg);
+  transform-origin: right bottom;
+}
+/*END*/
+
+.dropdown-list {
+  padding: 30px 0;
+  border-bottom: 2px solid #000;
+}
+.dropPlus {
+  margin-top: 20px;
+}
+.dropPlus span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #B4B4B4;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.dropPlus span:nth-child(1) {
+  transform: translate(7px, 0px) rotate(88deg);
+}
+.dropPlus span:nth-child(2) {
+  transform: translate(7px, -2px) rotate(0deg);
+}
+.dropPlus.active span:nth-child(1){
+  transform: scale(0);
+}
+.icon-text {
+  display: flex;
+  padding-left: 20px;
+}
+.icon {
+  color: #B4B4B4;
+  font-size: 36px;
+  margin-right: 20px;
+}
+.icon-text p {
+  color: #B4B4B4;
+  font-size: 20px;
+  align-self: baseline;
+}
+.menu-items {
+  margin-top: 30px;
+  display: none;
+  flex-direction: column;
+}
+.dropdown-list.active .menu-items {
+  display: flex;
+}
+.item {
+  font-size: 26px;
+  color: #B4B4B4;
+  margin: 0 0 30px 150px;
+}
+
+/*MEDIA*/
+@media screen and (max-width: 992px) {
+  .block-right .menu .dropdown {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .header-logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .block-right {
+    width: 390px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .block-right {
+    width: 100%;
+  }
+  .header {
+    padding: 25px 10px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .btn-auth {
+    margin-bottom: 20px;
+  }
+}
